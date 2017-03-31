@@ -1,0 +1,110 @@
+.bar-nav{
+    width:100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    /*padding-right: .5rem;*/
+    /*padding-left: .5rem;*/
+    background-color: #f7f7f8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+}
+.bar-nav {
+    background: -moz-linear-gradient( top,#3262a3,#2a5794);
+    background: -webkit-linear-gradient(top,#3262a3,#2a5794);
+    background: -webkit-gradient(linear,center top,center bottom,from(#3262a3), to(#2a5794));
+    background: -o-linear-gradient(top,#3262a3,#2a5794);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#3262a3, endColorstr=#2a5794);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#3262a3, endColorstr=#2a5794)";/*IE8+*/
+}
+.title{
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    /*margin: 0 -.5rem;*/
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+.bar_new .icon_back{
+    background: url(../images/agency.png) no-repeat;
+    background-position: 0rem 0rem;
+    background-size: 25rem;
+    width: 0.625rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.8rem;
+}
+.pull-left{
+    float: left;
+}
+
+.button-nav{
+    margin-right: .25rem;
+}
+.title, .bar .button-link {
+    color: #fff;
+}
+.button-nav.pull-left, .pull-right.search_icon_size, .button-nav.pull-right, .title.pull-left {
+    color: #fff;
+}
+.bar_new .button-link {
+    top: 0;
+    padding: 0;
+    font-size: .4rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    color: #0894ec;
+    border: 0;
+}
+.bar_new .button {
+    position: relative;
+    z-index: 20;
+    margin-top: 0;
+    font-weight: 400;
+}
+.bar-nav~.content{
+    top:2.2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*其他项*/
+.artificial{
+    color:#fff !important;
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
+}
+/*分享*/
+.share{
+    width:1.126rem;
+    height:1rem;
+    display: inline-block;
+    background: url(../images/agency.png) no-repeat -12.5rem 0rem;
+    background-size: 25rem;
+    vertical-align: middle;
+    position: absolute;
+    right:1rem;
+    top:0.6rem;
+}
+.share_s{
+    right:1rem;
+}
+.riwo{
+    position: relative;
+    z-index: 500;
+}

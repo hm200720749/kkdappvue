@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>申请提现</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/agency.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/commom.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">申请提现</h1>
+</header>
+<div class="content wdsuappage">
+    <div class="bank_cd">
+        <a href="javascript:void(0);" class="bank_name">
+            <div class="bank_id">中国建设银行</div>
+            <div class="bank_num">尾号6555储蓄卡</div>
+        </a>
+        <div>
+            <span class="rjt"></span>
+        </div>
+    </div>
+    <div>
+        <div  class="money_appli">
+            <div class="mform_head">提现金额</div>
+            <div class="mforminput">
+                <span>￥</span>
+                <input type="text" class="money_box" placeholder="输入提现金额"/>
+            </div>
+            <div class="mform_word">可提现金额为 <span class="wd_money">166.88</span> 元</div>
+            <div class="mform_word mforms_word mformred mformnone">金额已超过可提现余额</div>
+        </div>
+        <a class="applic_ok">确认提现</a>
+    </div>
+</div>
+<!--输入提现密码-->
+<div class="appli_mbox">
+        <div class="s_mask">
+            <form  action="" id="appli_cont" class="appli_cont">
+                <div class="appli_head">请输入提现密码 <b class="close_appli"></b></div>
+                <div class="appli_cashwo">提现金额</div>
+                <div class="appli_cash">
+                    <span>￥</span>
+                    <div class="cash_fh">
+                        <div class="cash_num"></div>
+                        <input type="hidden" value="" id="cashnum"/>
+                    </div>
+                </div>
+                <div class="pwd-box cashpwd_box">
+                    <input type="tel" maxlength="6" class="pwd-input" id="pwd-input" unselectable="on">
+                    <div class="fake-box">
+                        <input type="password" readonly="">
+                        <input type="password" readonly="">
+                        <input type="password" readonly="">
+                        <input type="password" readonly="">
+                        <input type="password" readonly="">
+                        <input type="password" readonly="">
+                    </div>
+                </div>
+            </form>
+        </div>
+</div>
+<script>
+
+
+    var $input = $(".fake-box input");
+    $("#pwd-input").on("input", function() {
+        var pwd = $(this).val().trim();
+        var len;
+        for (var i = 0, len = pwd.length; i < len; i++) {
+            $input.eq("" + i + "").val(pwd[i]);
+        }
+        $input.each(function() {
+            var index = $(this).index();
+            if (index >= len) {
+                $(this).val("");
+            }
+        });
+        if (len == 6) {
+            //执行其他操作
+//            self.sendPackage(pwd);
+            window.location.href="withdrawal_succ.html";//跳转测试
+    }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "list":[
+    {
+      "status":"wait",
+      "id":"2016112800377",
+      "applyDate":"2016-11-28",
+      "expectDate":"2016-11-28",
+      "expectTime":"15:00",
+      "pledg":"车",
+      "pledgInfo":"广州市天骏国际大厦天河路3000000号"
+    },
+    {
+      "status":"success",
+      "id":"2016112800477",
+      "applyDate":"2016-11-28",
+      "expectDate":"2016-11-28",
+      "expectTime":"15:00",
+      "pledg":"房",
+      "pledgInfo":"广州市天骏国际大厦天河路3000000号",
+      "valMoney":"773.8万"
+    },
+    {
+      "status":"fail",
+      "id":"2016112800577",
+      "applyDate":"2016-11-28",
+      "expectDate":"2016-11-28",
+      "expectTime":"15:00",
+      "pledg":"房",
+      "pledgInfo":"广州市天骏国际大厦天河路3000000号",
+      "failReason":"提交详细地址"
+    }
+  ]
+}

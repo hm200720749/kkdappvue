@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>设置提现密码</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/agency.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/commom.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">设置提现密码</h1>
+</header>
+<div class="content wdpwdpage">
+    <div class="wdpwd_header">设置6位提现密码</div>
+    <!--<div class="wdpwd_header">重新设置6位提现密码</div>-->
+    <div class="pwd-box">
+        <input type="tel" maxlength="6" class="pwd-input" id="pwd-input">
+        <div class="fake-box">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        $('#pwd-input').focus();
+    }
+
+    var $input = $(".fake-box input");
+    $("#pwd-input").on("input", function() {
+        var pwd = $(this).val().trim();
+        var len;
+        for (var i = 0, len = pwd.length; i < len; i++) {
+            $input.eq("" + i + "").val(pwd[i]);
+        }
+        $input.each(function() {
+            var index = $(this).index();
+            if (index >= len) {
+                $(this).val("");
+            }
+        });
+        if (len == 6) {
+            //执行其他操作
+//          self.sendPackage(pwd);
+            window.location.href="sure_pwd.html";//跳转测试
+        }
+    });
+</script>
+</body>
+</html>

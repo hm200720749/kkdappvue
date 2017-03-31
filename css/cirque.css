@@ -1,0 +1,64 @@
+.per_cirque{
+    margin:auto;
+}
+.per_cirque_wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+ .sec_wrapper{
+  position: absolute;
+  top:0;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+  .sec_wrapper.right{
+  right:0;
+}
+  .sec_wrapper.left{
+  left:0;
+}
+ .cirque_main{
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+   /*-webkit-transition:all 0.5s ;*/
+  }
+     .cirque_main.rightcirque{
+
+  right:0;
+ /*-webkit-transform:rotate(-215deg);*/
+  -webkit-transition:transform 0.3s linear 0.3s;
+  -moz-transition:transform 0.3s linear 0.3s;
+  -o-transition:transform 0.3s linear 0.3s;
+  -ms-transition:transform 0.3s linear 0.3s;
+  transition:transform 0.3s linear 0.3s;
+  /*-webkit-animation: circleProgressLoad_right 3s linear infinite;*/
+}
+  .cirque_main.leftcirque{
+
+  left:0;
+   /*-webkit-transform:rotate(-313deg);*/
+  -webkit-transition:transform 0.3s linear;
+  -moz-transition:transform 0.3s linear;
+  -o-transition:transform 0.3s linear;
+  -ms-transition:transform 0.3s linear;
+  transition:transform 0.3s linear;
+  /*-webkit-animation: circleProgressLoad_left 5s linear infinite;*/
+}
+ .per_cirque_wrapper  .textper{
+  position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    line-height: 1rem;
+    bottom: 0;
+    text-align: center;
+  width: 100%;
+  font-size: 0.75rem;
+}

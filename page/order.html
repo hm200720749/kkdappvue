@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0,minimum-scale=0.5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+<link rel="stylesheet" type="text/css" href="../css/hm.css">
+<link rel="stylesheet" type="text/css" href="../css/cirque.css">
+
+</head>
+<body style="background:#e2e6e9">
+<div id="order">
+        <!-- 底部导航 -->
+    <nav class="bar bar-tab">
+        <a class="tab-item " href="index.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item active" href="order.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">订单</span>
+        </a>
+        <a class="tab-item" href="personal_center.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">我的</span>
+        </a>
+    </nav>
+    
+        <div class="content order " >
+           <div class="tab-order">
+               <div class="tab-cont " :class="{'on':selectTapFir=='evaluate'}" @click="changeTap('evaluate')">评估订单</div>
+               <div class="tab-cont " :class="{'on':selectTapFir=='borrow'}" @click="changeTap('borrow')">贷款订单</div>
+           </div>
+           <div class="box-order" v-show="selectTapFir=='evaluate'">
+               <div class="item-tab">
+                   <div class="cont all" :class="{'on':selectTapSec=='eva_all'}" @click="changeTap('eva_all')">全部</div>
+                   <div class="cont loading" :class="{'on':selectTapSec=='eva_wait'}" @click="changeTap('eva_wait')">估值中</div>
+                   <div class="cont suc" :class="{'on':selectTapSec=='eva_suc'}" @click="changeTap('eva_suc')">估值完成</div>
+                   <div class="cont fail" :class="{'on':selectTapSec=='eva_fail'}" @click="changeTap('eva_fail')">已终止</div>
+               </div>
+               <div class="blank065"></div>
+               <!-- all -->
+               <div class="item-box all" v-show="selectTapSec=='eva_all'">
+                    
+                   <div class="cont" :class="[{'s_sus':item.status=='success'},{'s_sus f_fail':item.status=='fail'}]" v-for="item in list">
+                       <div class="left">
+                           <template v-if="item.status=='wait'">
+                               <span class="i_icon_guz"></span>
+                               <div class="status">估值中</div>
+                               <p class="time">预计{{item.expectDate}}</p>
+                               <p class="time">{{item.expectTime}}前出值</p>
+                           </template>
+                           <template v-if="item.status=='success'">
+                               <span class="i_icon_cg"></span>
+                               <div class="status">估值完成</div>
+                               <p class="money">{{item.valMoney}}</p>
+                               <p class="time">房产估值（元）</p>
+                           </template>
+                           <template v-if="item.status=='fail'">
+                               <span class="i_icon_zz"></span>
+                               <div class="status">已终止</div>
+                               <div class="status" style="font-size:0.8rem;margin:0.2rem">终止原因</div>
+                               <div class="status">{{item.failReason}}</div>
+                           </template>
+                       </div>
+                       <div class="right">
+                            <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                            <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                           <a href="borrow_want.html" v-if="item.status=='success'"><div class="btn">在线申请</div></a>
+                           <div class="btn" v-if="item.status=='fail'">重新评估</div>
+                       </div>
+                   </div>
+                   
+
+                   
+               </div>
+               <!-- loading -->
+               <div class="item-box  loading" v-show="selectTapSec=='eva_wait'">
+                    <div class="cont" v-for="item in tempWait">
+                       <div class="left">
+                           <span class="i_icon_guz"></span>
+                           <div class="status">估值中</div>
+                           <p class="time">预计{{item.expectDate}}</p>
+                           <p class="time">{{item.expectTime}}前出值</p>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                       </div>
+                   </div>
+               </div>
+               <!-- suc -->
+               <div class="item-box  suc" v-show="selectTapSec=='eva_suc'">
+                 <div class="cont s_sus" v-for="item in tempSuc">
+                       <div class="left">
+                           <span class="i_icon_cg"></span>
+                           <div class="status">估值完成</div>
+                           <p class="money">{{item.valMoney}}</p>
+                           <p class="time">房产估值（元）</p>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                           <a href="borrow_want.html"><div class="btn">在线申请</div></a>
+                       </div>
+                   </div>
+               </div>
+               <!-- fail -->
+               <div class="item-box  fail" v-show="selectTapSec=='eva_fail'">
+                 <div class="cont s_sus f_fail" v-for="item in tempFail">
+                       <div class="left">
+                           <span class="i_icon_zz"></span>
+                           <div class="status">已终止</div>
+                           <div class="status" style="font-size:0.8rem;margin:0.2rem">终止原因</div>
+                           <div class="status">{{item.failReason}}</div>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                           <div class="btn">重新评估</div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <!-- borrow -->
+           <div class="box-borw" v-show="selectTapFir=='borrow'">
+               <div class="item-tab">
+                   <div class="cont all" :class="{'on':selectTapSec=='bor_all'}" @click="changeTap('bor_all')">全部</div>
+                   <div class="cont loading" :class="{'on':selectTapSec=='bor_wait'}" @click="changeTap('bor_wait')">办理中</div>
+                   <div class="cont suc" :class="{'on':selectTapSec=='bor_suc'}" @click="changeTap('bor_suc')">已放款</div>
+                   <div class="cont fail" :class="{'on':selectTapSec=='bor_fail'}" @click="changeTap('bor_fail')">已失败</div>
+               </div>
+               <div class="blank065"></div>
+               <!-- all -->
+               <div class="item-box all" v-show="selectTapSec=='bor_all'">
+                   <div class="cont" v-for="item in borList">
+                       <div class="left">
+                           <template v-if="item.status=='wait'">
+                               <span class="i_icon_guz"></span>
+                               <div class="status">办理中</div>
+                               <p class="time">预计{{item.expectDate}}</p>
+                               <p class="time">放款</p>
+                           </template>
+                           <template v-if="item.status=='success'">
+                               <span class="i_icon_cg"></span>
+                               <div class="status">已放款</div>
+                               <p class="money">{{item.valMoney}}</p>
+                               <p class="time">放款金额（元）</p>
+                           </template>
+                           <template v-if="item.status=='fail'">
+                               <span class="i_icon_zz"></span>
+                               <div class="status">审核不通过</div>
+                               <div class="status">已失败</div>
+                           </template>
+                           <!--<span class="i_icon_guz"></span>-->
+                           <!--<div class="status">办理中</div>-->
+                           <!--<p class="time">预计2016-11-28</p>-->
+                           <!--<p class="time">放款</p>-->
+                       </div>
+                       <div class="right">
+                            <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                            <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                       </div>
+                   </div>
+               </div>
+               <!-- two loading-->
+               <div class="item-box  loading" v-show="selectTapSec=='bor_wait'">
+                 <div class="cont" v-for="item in tempBorWait">
+                       <div class="left">
+                           <span class="i_icon_guz"></span>
+                           <div class="status">办理中</div>
+                           <p class="time">预计{{item.expectDate}}</p>
+                           <p class="time">放款</p>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                       </div>
+                   </div>
+               </div>
+               <!-- three suc-->
+               <div class="item-box  suc" v-show="selectTapSec=='bor_suc'">
+                 <div class="cont " v-for="item in tempBorSuc">
+                       <div class="left">
+                           <span class="i_icon_cg"></span>
+                           <div class="status">已放款</div>
+                           <p class="money">{{item.valMoney}}</p>
+                           <p class="time">放款金额（元）</p>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                       </div>
+                   </div>
+               </div>
+               <!-- four fail-->
+               <div class="item-box  fail" v-show="selectTapSec=='bor_fail'">
+                 <div class="cont " v-for="item in tempBorFail">
+                       <div class="left">
+                           <span class="i_icon_zz"></span>
+                           <div class="status">审核不通过</div>
+                           <div class="status">已失败</div>
+                       </div>
+                       <div class="right">
+                           <div class="tips_icon car" v-if="item.pledg=='车'">车</div>
+                           <div class="tips_icon house" v-if="item.pledg=='房'">房</div>
+                           <div class="pro_title">订单编号{{item.id}}</div>
+                           <div class="pro_tex">申请时间{{item.applyDate}}</div>
+                           <div class="pro_tex">{{item.pledgInfo}}</div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+<script src="../js/vue.js"></script>
+<script src="../js/vue-resource.min.js"></script>
+<script src="../vuejs/order.js"></script>
+    <script type="text/javascript">
+            
+//            $(document).ready(function(){
+//
+//                $('.item-tab .cont').click(function(){
+//                    $(this).siblings().removeClass('on');
+//                    $(this).addClass('on');
+//                    if($(this).hasClass('all')){
+//                      $(this).parent().siblings('.item-box').hide();
+//                      $(this).parent().siblings('.item-box.all').show();
+//                    }
+//                   else if($(this).hasClass('loading')){
+//                      $(this).parent().siblings('.item-box').hide();
+//                      $(this).parent().siblings('.item-box.loading').show();
+//                    }
+//                   else if($(this).hasClass('suc')){
+//                      $(this).parent().siblings('.item-box').hide();
+//                      $(this).parent().siblings('.item-box.suc').show();
+//                    }
+//                   else if($(this).hasClass('fail')){
+//                      $(this).parent().siblings('.item-box').hide();
+//                      $(this).parent().siblings('.item-box.fail').show();
+//                    }
+//                })
+//                $('.box-borw').hide();
+//                $('.tab-order .tab-cont').click(function(){
+//                    $('.tab-order .tab-cont').removeClass('on');
+//                    $(this).addClass('on');
+//                    if($(this).hasClass('brw')){
+//                        $('.box-order').hide();
+//                        $('.box-borw').show();
+//                    }else{
+//                        $('.box-borw').hide();
+//                        $('.box-order').show();
+//                    }
+//                })
+//            })
+    </script>
+</body>
+</html>

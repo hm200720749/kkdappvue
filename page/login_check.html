@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>输入验证码</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/logreg.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">输入验证码</h1>
+</header>
+<div class="content logregpage">
+    <form action="../page/info_input.html" class="loginform" id="loginform" onsubmit="return checksaves();">
+        <div class="log_ipus">
+            <span class="logvcode_icon"></span>
+            <input name="logcode" class="logcode" id="logcode" type="text"  placeholder="请输入验证码"/>
+        </div>
+        <div class="log_sub">
+            <input type="submit" class="log_btn" value="登录" onclick="logcheck()"/>
+        </div>
+        <div class="field agree">
+            <div class="agreeok agreement_checked">
+                <input type="checkbox" class="agrees" name="agreement" id="J_agreement" checked="checked" style="display:none;" />
+            </div>
+            <div class="f_l take_agree">
+                登录即代表您同意
+                <a href="#" class="ag_red kkd_agreement">《客客贷APP服务协议》</a>
+            </div>
+            <div class="blank0"></div>  
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

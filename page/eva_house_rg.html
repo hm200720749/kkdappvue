@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0,minimum-scale=0.5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+<link rel="stylesheet" type="text/css" href="../css/hm.css">
+<link rel="stylesheet" type="text/css" href="../css/cirque.css">
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/fix_code.js"></script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="bar-nav bar_new">
+        <a onclick="" class="button button-nav pull-left">
+            <span class="icon_back"></span>
+        </a>
+        <h1 class="title pull-left">人工评房</h1>
+    </header>
+    <!-- 顶部导航 end -->
+        <div class="content eva_house" style="background:#e2e6e9">
+            <div class="tap_select">
+                <div class="left on tap">有房本照片</div>
+                <div class="right tap">无房本照片</div>
+            </div>
+            <div class="blank065"></div>
+            <form action="value_subsuc.html" class="has_page">
+            <!-- 资料1 -->
+            <div class="section_part">
+                <div class="part_title">上传房本照片</div>
+                <div class="cont">
+                    <div class="cont_bor upimg">
+                        <div class="img_title">
+                            <div class="i_tip"></div>
+                            <div class="tip_text">请上传单套房产房本照片</div>
+                        </div>
+                        <!-- img_add -->
+                        <div class="exp_img">
+                            <div class="add_i_box" >
+                                <input type="file" accept="image/*" hidden class="img_file" onchange="readURL(this)">
+                                <img src="../images/add_img_bg.png" alt="" onclick="do_clk_inp(this)">
+                            </div>
+                            <div class="add_i_box" >
+                                <input type="file" accept="image/*" hidden class="img_file" onchange="readURL(this)">
+                                <img src="../images/add_img_bg.png" alt="" onclick="do_clk_inp(this)">
+                            </div>
+                            <div class="add_i_box" >
+                                <input type="file" accept="image/*" hidden class="img_file" onchange="readURL(this)">
+                                <img src="../images/add_img_bg.png" alt="" onclick="do_clk_inp(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_bor nr">
+                        <div class="pro_name">小区名称</div>
+                        <input type="text" class="pro_val" placeholder='选填'>
+                    </div>
+                </div>
+            </div>
+            <div class="blank065"></div>
+                <!-- 资料2 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor nr">
+                        <div class="pro_name">抵押情况</div>
+                        <div class="pro_radio">
+                            <div class="radio_btn on" data-radio-val='一抵'>一抵<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='二抵'>二抵<span class="i_check"></span></div>
+                            <input type="hidden" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank065"></div>
+            <!-- 资料3 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor nr">
+                         <div class="pro_name">服务网点</div>
+                        <select name="" id="" class="pro_val">
+                            <option value="">众联贷广州总公司</option>
+                        </select>
+                        <span class="i_arrow_r"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank065"></div>
+            <div class="sub_box">
+                <input type="submit" class="sub_button" value="提交">
+            </div>
+            </form>
+            <form action="" class="has_page_no">
+            <!-- 资料1 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor">
+                        <div class="pro_name">房产地址</div>
+                        <input type="text" class="pro_val" placeholder='请输入房屋详细地址'>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_bor">
+                        <div class="pro_name">小区名称</div>
+                        <input type="text" class="pro_val" placeholder='选填'> 
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_bor nr">
+                        <div class="pro_name">建筑面积</div>
+                        <input type="text" class="pro_val" placeholder='填写房屋建筑面积'>                
+                        <span class="r_tip">平米</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank035"></div>
+            <!-- 资料2 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor db">
+                        <div class="pro_name">房产种类</div>
+                        <div class="pro_radio">
+                            <div class="radio_btn on" data-radio-val='商品房'>商品房<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='成本价房'>成本价房<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='经济适用房'>经济适用房<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='其他'>其他<span class="i_check"></span></div>
+                            <input type="hidden" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_bor nr">
+                        <div class="pro_name">规划通途</div>
+                        <div class="pro_radio">
+                            <div class="radio_btn on" data-radio-val='住宅'>住宅<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='公寓'>公寓<span class="i_check"></span></div>
+                            <input type="hidden" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank065"></div>
+            <!-- 资料3 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor nr">
+                        <div class="pro_name">抵押情况</div>
+                        <div class="pro_radio">
+                            <div class="radio_btn on" data-radio-val='一抵'>一抵<span class="i_check"></span></div>
+                            <div class="radio_btn" data-radio-val='二抵'>二抵<span class="i_check"></span></div>
+                            <input type="hidden" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank065"></div>
+            <!-- 资料4 -->
+            <div class="section_part">
+                <div class="cont">
+                    <div class="cont_bor nr">
+                         <div class="pro_name">服务网点</div>
+                        <select name="" id="" class="pro_val">
+                            <option value="">众联贷广州总公司</option>
+                        </select>
+                        <span class="i_arrow_r"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_box">
+                <span class="tips">估值结果仅供参考，实际抵押价格需客客贷风控专员审核确认</span>
+                <div class="blank035"></div>
+                <input type="submit" class="sub_button" value="提交">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+           
+            $(document).ready(function(){
+                $('.radio_btn').click(function(){
+                    $(this).siblings('.radio_btn').removeClass('on');
+                    $(this).addClass('on');
+                })
+                $('.tap_select .tap').click(function(event) {
+                    $('.tap').removeClass('on');
+                    $(this).addClass('on');
+                    if($(this).hasClass('left')){
+                        $('.has_page').show();
+                        $('.has_page_no').hide();
+                    }else{
+                        $('.has_page').hide();
+                        $('.has_page_no').show();
+                    }
+                });
+            })
+    </script>
+</body>
+</html>

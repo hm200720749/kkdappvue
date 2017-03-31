@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>意见反馈</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/agency.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/commom.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">意见反馈</h1>
+</header>
+<div class="content fbapage">
+    <form action="" class="fb_post" onsubmit="return subfeed()">
+        <div class="feedback_con">
+            <textarea name="feedb" class="feedb" id="" cols="30" rows="5" placeholder="请留下您的意见或建议"></textarea>
+            <div class="word_total"><span class="f_sz">0</span>/300</div>
+        </div>
+        <div class="feb_sub">
+            <input type="submit" class="feb_btn" value="提交"/>
+        </div>
+    </form>
+    <div class="kefu_phone">客服电话<span>0755-33940054</span></div>
+</div>
+<script>
+    function subfeed(){
+        if ($.trim($(".feedb").val()).length > 300) {
+            alert("已超过最大限制字数");
+            return false;
+        }
+    }
+    $(".feedb").keyup(function(){
+        var sz = $.trim($(".feedb").val()).length;
+        if($.trim($(".feedb").val()).length > 300){
+            alert("已超过最大限制字数");
+        }
+        $(".f_sz").html(sz);
+    })
+</script>
+</body>
+</html>

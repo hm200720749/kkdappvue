@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0,minimum-scale=0.5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+<link rel="stylesheet" type="text/css" href="../css/hm.css">
+<link rel="stylesheet" type="text/css" href="../css/cirque.css">
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/uploadImage.js"></script>
+<script src="../js/fix_code.js"></script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="bar-nav bar_new">
+        <a onclick="" class="button button-nav pull-left">
+            <span class="icon_back"></span>
+        </a>
+        <h1 class="title pull-left">在线申请</h1>
+    </header>
+    <!-- 顶部导航 end -->
+    <div class="content brw_want gry">
+    <!-- 表单 -->
+      <form action="loanorder_details.html">
+       <div class="brw_step_1" >
+       <div class="banner">
+           <img src="../images/borrow_banner.jpg" alt="">
+       </div>
+           <div class="amount_brw">
+               <div class="pledge">2016款 Sportback 35 TFSI 进取型</div>
+               <div class="tex">贷款估值</div>
+               <div class="amount">23.8万</div>
+           </div>
+           <div class="cont">
+               <div class="pro_name">借款期限</div>
+               <select name="" id="" class="pro_val">
+                 <option value="">12个月</option>
+               </select>
+               <span class="i_arrow"></span>
+           </div>
+           <div class="cont">
+               <div class="pro_name">还款方式</div>
+               <select name="" id="" class="pro_val">
+                 <option value="">先息后本</option>
+               </select>
+               <span class="i_arrow"></span>
+           </div>
+           <div class="cont">
+               <div class="pro_name">借款用途</div>
+               <input type="text" class="ui_inp" placeholder='请简述你的借款用途'>
+           </div>
+           <div class="n_btn">下一步</div>
+       </div>
+       <!-- 第二步 -->
+       <div class="brw_step_2" style="display:none">
+           <div class="cont_box">
+               <div class="cont">
+                   <div class="pro_name">借款人信息填写</div>
+                   <span class="i_arrow"></span>
+               </div>
+               <div class="expand_box">
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">公司职位：</div>
+                           <input type="text" class="pro_val" placeholder='请输入您的职位'></div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">单位名称：</div>
+                           <input type="text" class="pro_val" placeholder='请输入您的单位'></div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">年收入额：</div>
+                           <input type="text" class="pro_val" placeholder='请输入您的年收入'>               
+                           <span class="i_r_tip">万元</span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">婚姻状况：</div>
+                           <select name="" id="" class="pro_val">
+                               <option value="">未婚</option>
+                               <option value="">已婚</option>
+                               <option value="">离异</option>
+                               <option value="">丧偶</option>
+                           </select>
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot nr">
+                           <div class="pro_name">是否有车：</div>
+                           <select name="" id="" class="pro_val">
+                               <option value="">有</option>
+                               <option value="">无</option>
+                           </select>
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="cont_box">
+               <div class="cont">
+                   <div class="pro_name">房屋信息填写</div>
+                   <span class="i_arrow"></span>
+               </div>
+               <div class="expand_box">
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">房产位置：</div>
+                           <input type="text" class="pro_val" placeholder='请输入您的房产位置'></div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">房屋类型：</div>
+                           <select name="" id="" class="pro_val">
+                               <option value="">商品房</option>
+                               <option value="">别墅</option>
+                               <option value="">商铺</option>
+                           </select>
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">建筑面积：</div>
+                           <input type="text" class="pro_val" placeholder='请输入您的年收入'>           
+                           <span class="i_r_tip">
+                               m <sup>2</sup>
+                           </span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">竣工日期：</div>
+                           <input type="date" class="pro_val">           
+                           <span class="i_arrow"></span>
+                       </div>
+                    
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">登记日期：</div>
+                           <input type="date" class="pro_val">           
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">楼层/总层：</div>
+                           <input type="text" class="pro_val">
+                           <span class="i_r_tip">楼/</span>
+                           <input type="text" class="pro_val">
+                           <span class="i_r_tip">层</span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot">
+                           <div class="pro_name">装修情况：</div>
+                           <select name="" id="" class="pro_val">
+                               <option value="">毛坯</option>
+                               <option value="">简装</option>
+                               <option value="">精装</option>
+                               <option value="">豪装</option>
+                           </select>
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+                   <div class="cont_expand">
+                       <div class="bor_bot nr">
+                           <div class="pro_name">获房方式：</div>
+                           <select name="" id="" class="pro_val">
+                               <option value="">买卖或转让</option>
+                               <option value="">继承</option>
+                               <option value="">分割</option>
+                               <option value="">赠与</option>
+                           </select>
+                           <span class="i_arrow"></span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="cont_box">
+               <div class="cont">
+                   <div class="pro_name">房屋实拍上传<span class='min_fz'>(请上传<b>室内及外景</b>等实拍图片)</span></div>
+                   <span class="i_arrow"></span>
+               </div>
+               <div class="expand_box exp_img">
+                    <div class="add_i_box" >
+                        <input type="file" accept="image/*" multiple hidden class="img_file" onchange="readURL(this)">
+                        <img src="../images/add_back.png" alt="" onclick="do_clk_inp(this)">
+                    </div>
+               </div>
+           </div>
+           <div class="cont_box">
+               <div class="cont">
+                   <div class="pro_name">房屋资料上传<span class='min_fz'>(请上<b>房产证及土地证</b>等有效证件)</span></div>
+                   <span class="i_arrow"></span>
+               </div>
+               <div class="expand_box exp_img">
+                    <div class="add_i_box" >
+                        <input type="file" accept="image/*" multiple hidden class="img_file" onchange="readURL(this)">
+                        <img src="../images/add_back.png" alt="" onclick="do_clk_inp(this)">
+                    </div>
+               </div>
+           </div>
+            <div class="blank055 gary_f8"></div>
+               <input type="submit" class="sub_button" value="立即申请">
+       </div>
+       </form>
+    </div>
+    
+    <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.cont_box .expand_box').hide();
+                    $('.cont_box .cont').click(function(){
+                        $(this).siblings('.expand_box').slideToggle();
+                        $(this).find('.i_arrow').toggleClass('up');
+                        if($('.i_arrow').hasClass('up')){
+                            $('.sub_button').addClass('sb_pr');
+                        }else{
+                            $('.sub_button').removeClass('sb_pr');
+                        }
+                        
+                    })
+
+                    $('.n_btn').click(function(){
+                      $('.brw_step_1').hide();
+                      $('.brw_step_2').show();
+                    })
+                    $('.bar-nav .icon_back').click(function(event) {
+                        window.history.back();
+                    });
+                })
+    </script>
+</body>
+</html>

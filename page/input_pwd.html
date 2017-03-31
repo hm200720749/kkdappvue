@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>修改提现密码</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/agency.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/commom.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">修改提现密码</h1>
+</header>
+<div class="content wdpwdpage">
+    <div class="wdpwd_header">输入当前提现密码</div>
+    <div class="pwd-box">
+        <input type="tel" maxlength="6" class="pwd-input" id="pwd-input">
+        <div class="fake-box">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+            <input type="password" readonly="">
+        </div>
+    </div>
+    <div class="refepwd"><a href="../page/found_pwd.html" class="refe">忘记提现密码</a></div>
+</div>
+<script>
+    var $input = $(".fake-box input");
+    $("#pwd-input").on("input", function() {
+        var pwd = $(this).val().trim();
+        for (var i = 0, len = pwd.length; i < len; i++) {
+            $input.eq("" + i + "").val(pwd[i]);
+        }
+        $input.each(function() {
+            var index = $(this).index();
+            if (index >= len) {
+                $(this).val("");
+            }
+        });
+        if (len == 6) {
+            //执行其他操作
+            self.sendPackage(pwd);
+        }
+    });
+//    function(){}
+</script>
+</body>
+</html>

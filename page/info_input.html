@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>完善个人资料</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/logreg.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body>
+
+<header class="bar-nav bar_new">
+    <a onclick="" class="button button-nav pull-left">
+        <span class="icon_back"></span>
+    </a>
+    <h1 class="title pull-left">完善个人资料</h1>
+</header>
+<div class="content logregpage">
+    <div class="logreg_wo">为了方便我们为您服务，请完善您的资料</div>
+    <form action="" class="loginfoma_form">
+        <div class="loginfoma">
+            <div class="log_ipus">
+                <span class="lognawo">姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                <input name="logname" class="loginfo logname" id="logname" type="text"/>
+            </div>
+            <div class="log_ipus">
+                <span class="lognawo">城&nbsp;&nbsp;&nbsp;&nbsp;市</span>
+                <div class="modi_info">
+                    <div class="select-area">
+                        <span class="select-value"></span>
+                        <select>
+                            <option>广 州</option>
+                            <option>兰 州</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="logcity"/>
+                </div>
+                <span class="logrjt"></span>
+            </div>
+            <div class="log_ipus">
+                <span class="lognawo">邀请码</span>
+                <input name="logcode" class="loginfo logcode" id="logcode" type="text" placeholder="选   填"/>
+            </div>
+        </div>
+        <div class="log_sub">
+            <input type="submit" class="log_btn" value="确认"/>
+        </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>

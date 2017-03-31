@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>客客贷</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0,minimum-scale=0.5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+<link rel="stylesheet" type="text/css" href="../css/hm.css">
+<link rel="stylesheet" type="text/css" href="../css/cirque.css">
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="index_page">
+    <!--<div class="warp" v-show="loadSuc"></div>-->
+    <div class="main_cont" v-cloak>
+        <!-- 底部导航 -->
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="index.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="order.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">订单</span>
+        </a>
+        <a class="tab-item" href="personal_center.html" onclick="">
+            <i class="icon"></i>
+            <span class="tab-label">我的</span>
+        </a>
+    </nav>
+    <!-- leftpage -->
+    <!-- <div class="leftpage" id="leftpage">
+        <div class="mainpage">
+        </div>
+    </div> -->
+        <div class="content index " style="background:#e2e6e9">
+           <!-- banner -->
+            <div id="focus" class="focus">
+                    <ul class="img-ground">
+                            <li v-for="item in banner"><a href="#"><img  src="" :src="item.imgSrc"/></a></li>
+                    </ul>
+            </div>
+            <!-- banner end -->
+            <div id="main_content">
+            <div class="t_money">
+                <h1 class="num" >{{loanTotalmoneyF}}</h1>
+                <p class="ti_te">累计放款总额（元）</p>
+                <span class="i_icon_money"></span>
+            </div>
+            <div class="blank065"></div>
+            <!-- house -->
+            <div class="project house">
+                <div class="pro_title">
+                    <span class="line"></span>
+                    <span class="pro_name">房屋抵押产品</span>
+                    <span class="line"></span>
+                </div>
+                <div class="pro_content">
+                    <div class="lilv"><span>1.18</span>%</div>
+                    <div class="tip">最高8成，金额30万起不设上限</div>
+                    <a href="eva_house.html"><div class="btn">我要评房</div></a>
+                    <span class="i_r_arrow"></span>
+                </div>
+            </div>
+            <div class="blank065"></div>
+            <!-- car -->
+            <div class="project car">
+                <div class="pro_title">
+                    <span class="line"></span>
+                    <span class="pro_name">车辆抵押产品</span>
+                    <span class="line"></span>
+                </div>
+                <div class="pro_content">
+                    <div class="lilv"><span>0.99</span>%</div>
+                    <div class="tip">最高8成，金额3万起不设上限</div>
+                    <a href="eva_car.html"><div class="btn">我要评车</div></a>
+                    <span class="i_r_arrow"></span>
+                </div>
+            </div>
+            <div class="blank065"></div>
+             <!-- tip -->
+             <div class="adv">
+                <div class="pro_name">
+                    <span class="i_fuhao left"></span>
+                    <span class="tex">已有{{rebateInfo.amount}}名经纪人在众联贷赚的返费！</span>
+                    <span class="i_fuhao right"></span>
+                </div>
+                 <div class="expam " :class="[{'anima_1':index==0},{'anima_2':index==1},{'anima_3':index==2}]" v-for="(item,index) in rebateInfo.scrollInfo">
+                     <div class="time">{{item.time}}</div>
+                     <div class="name">{{item.location}}{{item.phone|formatPhone}}</div>
+                     <div class="money">赚到返费<span>{{item.money}}元</span></div>
+                 </div>
+
+             </div>
+             </div>
+        </div>
+        <!-- 红包 -->
+        <div class="red_tips" v-if="diswarp_redpacket">
+            <div class="close"></div>
+            <a href=""><div class="bg_red_pack"></div></a>
+        </div>
+        <!-- message -->
+        <div class="mess_box"></div></div>
+</div>
+
+        <script src="../js/vue.js"></script>
+        <script src="../js/vue-resource.min.js"></script>
+<script src="../js/touchimg.js"></script>
+        <script src="../vuejs/v_index.js"></script>
+
+</body>
+</html>

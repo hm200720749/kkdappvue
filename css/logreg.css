@@ -1,0 +1,122 @@
+/*µÇÂ¼×¢²á*/
+.logregpage{
+    background: #ededed;
+}
+
+.log_ipus{
+    height:2.5rem;
+    background: #fff;
+    padding:0 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.logph_icon{
+    width:0.875rem;
+    height:1.475rem;
+    display:inline-block;
+    background: url(../images/agency.png) no-repeat -12.5rem -5rem;
+    background-size: 25rem;
+}
+.logvcode_icon{
+    width:1.25rem;
+    height:1.25rem;
+    display:inline-block;
+    background: url(../images/agency.png) no-repeat -15rem -5rem;
+    background-size: 25rem;
+}
+.logphone,.logcode{
+    flex: 1;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+    color:#888888;
+    font-size: 0.8rem;
+}
+.log_sub{
+    padding: 0 0.75rem;
+}
+.log_btn{
+    width: 100%;
+    line-height: 2.5rem;
+    background: #3a72bf;
+    color:#fff;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+}
+.agree{
+    padding: 0 0.75rem;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.agree .agreement{
+    width:0.75rem;
+    height:0.75rem;
+    display:inline-block;
+    background: url(../images/agency.png) no-repeat -20rem -5rem;
+    background-size: 25rem;
+    margin-right:0.5rem;
+}
+.agree .agreement_checked{
+    width:0.75rem;
+    height:0.75rem;
+    display:inline-block;
+    background: url(../images/agency.png) no-repeat -17.5rem -5rem;
+    background-size: 25rem;
+    margin-right:0.5rem;
+}
+.take_agree{
+    color:#888888;
+}
+.kkd_agreement{
+    color:#2a5794;
+}
+.lognawo{
+    flex: 1;
+    color:#888888;
+    font-size: 0.8rem;
+}
+.loginfo{
+    flex: 1;
+    text-align: right;
+    color:#333333;
+    font-size: 0.8rem;
+}
+.modi_info{
+    flex: 1;
+    font-size: 0.8rem;
+    text-align: right;
+}
+.loginfoma_form{
+}
+.loginfoma{
+    padding: 0 0.75rem;
+    background: #fff;
+    margin-bottom: 1rem;
+}
+.loginfoma_form .log_ipus{
+    margin:0;
+    padding: 0;
+    border-bottom: 0.05rem solid #ccc;
+}
+.loginfoma_form .log_ipus:last-child{
+    border-bottom: 0;
+}
+.logrjt{
+    width:0.35rem;
+    height:0.7rem;
+    background: url(../images/agency.png) no-repeat -12.5rem -2.5rem;
+    background-size: 25rem;
+    /*vertical-align: -1.7rem;*/
+    display: inline-block;
+    margin-left: 0.15rem;
+}
+.logreg_wo{
+    color:#2a5794;
+    font-size: 0.7rem;
+    text-align: center;
+    margin:0.5rem 0;
+}
