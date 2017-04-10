@@ -15,7 +15,11 @@
 <link rel="stylesheet" type="text/css" href="../css/header.css">
 <link rel="stylesheet" type="text/css" href="../css/hm.css">
 <link rel="stylesheet" type="text/css" href="../css/cirque.css">
-
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body style="background:#e2e6e9">
 <div id="order">
@@ -35,7 +39,7 @@
         </a>
     </nav>
     
-        <div class="content order " >
+        <div class="content order " v-cloak>
            <div class="tab-order">
                <div class="tab-cont " :class="{'on':selectTapFir=='evaluate'}" @click="changeTap('evaluate')">评估订单</div>
                <div class="tab-cont " :class="{'on':selectTapFir=='borrow'}" @click="changeTap('borrow')">贷款订单</div>
