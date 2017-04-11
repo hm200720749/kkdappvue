@@ -6,16 +6,19 @@ var vm=new Vue({
         rebateInfo:{},
         loadSuc:true,
         diswarp_redpacket:false,
+        documentWidth:document.body.clientWidth,
     },
     beforeCreate:function(){
-        console.log(1);
     },
     created:function(){
-        console.log(2);
     },
     mounted:function(){
         this.$nextTick(function(){
             this.loadData();
+            var that=this;
+            window.onresize=function(){
+                that.documentWidth=document.body.clientWidth;
+            }
         })
     },
     updated:function(){
@@ -41,6 +44,11 @@ var vm=new Vue({
             if(stri){stri+=result};
             return stri;
         },
+    },
+    watch:{
+        documentWidth:function(val){
+            setTimeout(touchimg({elem:'focus',loopTime:5000}),500);
+        }
     },
     methods:{
         loadData:function(){
