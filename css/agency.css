@@ -290,7 +290,7 @@
     border-bottom: 0.05rem solid #cecece;
     padding: 0rem 0.75rem;
 }
-.share_cont .pintai div{
+.share_cont .pintai .bdsharebuttonbox div{
     width:23%;
     display: inline-block;
     _float:left;
@@ -411,8 +411,8 @@
 .sum_info{
     overflow: hidden;
     padding:0 0.75rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
 }
@@ -480,8 +480,8 @@
 .news_de{
     width: 100%;
     padding:0 0.75rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
 }
@@ -495,17 +495,20 @@
     width:90%;
     position: relative;
     padding-left: 1.3rem;
+    display: block;
+    overflow: hidden;
 }
 .jtf{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
 }
 .jtfs{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: flex-start;
@@ -614,10 +617,10 @@
     padding: 0.75rem 0.75rem 2.5rem;
 }
 .ma_list{
-    display: flex;
     display: -webkit-box;
-    align-items: center;
-    -webkit-box-align: center;
+    display: flex;
+    /*align-items: center;*/
+    /*-webkit-box-align: center;*/
     /*padding-top: 0.75rem;*/
 }
 .ma1{
@@ -634,10 +637,10 @@
     color: #888888;
 }
 .m_left{
-    display: flex;
     display: -webkit-box;
-    align-items: center;
-    -webkit-box-align: center;
+    display: flex;
+    /*align-items: center;*/
+    /*-webkit-box-align: center;*/
     position: relative;
     z-index: 1;
 }
@@ -755,8 +758,8 @@
 .mate_bcae{
     padding: 0.45rem;
     background: #fdefd3;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     margin-bottom: 0.5rem;
@@ -781,13 +784,14 @@
 }
 .share_list{
     height: 3.25rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
     color:#2a5794;
     font-size: 0.9rem;
+    -webkit-box-pack: center;
 }
 .tab{
     display: none;
@@ -821,11 +825,12 @@
     border-radius: 0.25rem;
 }
 .qr_part{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
 }
 .qr_box{
     width:10.4rem;
@@ -846,10 +851,10 @@
 .pe_edit{
     height:6.2rem;
     background: #2a5795;
-    display: flex;
     display: -webkit-box;
-    -webkit-box-align: center;
+    display: flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
     padding:0 0.75rem;
 }
@@ -903,7 +908,7 @@
 .pe_addre{
     color:#fff;
     font-size: 0.7rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 .edit_icon{
     width:0.925rem;
@@ -919,7 +924,7 @@
     display: -webkit-box;
     display: flex;
     align-items: center;
-    -webkit-box-align:center;
+    -webkit-box-align: center;
     justify-content: center;
     padding: 0.25rem 0.75rem;
 }
@@ -957,7 +962,7 @@
     display: -webkit-box;
     display: flex;
     align-items: center;
-    -webkit-box-align:center;
+    -webkit-box-align: center;
     justify-content: center;
 }
 .op_icon{
@@ -998,8 +1003,8 @@
     height: 2.475rem;
     display: -webkit-box;
     display: flex;
-    -webkit-box-align:center;
     align-items: center;
+    -webkit-box-align: center;
     color:#333333;
     font-size: 0.8rem;
     -webkit-box-flex: 1;
@@ -1039,8 +1044,8 @@
 .modify_info{
     width:100%;
     height: 3rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1115,8 +1120,8 @@
     height:3rem;
     color:#333333;
     font-size: 0.9rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1126,8 +1131,8 @@
     height:3rem;
     color:#333333;
     font-size: 0.9rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1135,7 +1140,7 @@
 .ep_icon{
     width:0.9rem;
     height:1.5rem;
-    display:inline-block;
+    display:-webkit-box;
     background: url(../images/agency.png) no-repeat 0 -10rem;
     background-size: 25rem;
     margin-left: 0.5rem;
@@ -1143,7 +1148,7 @@
 .vco_icon{
     width:1.475rem;
     height:1.5rem;
-    display:inline-block;
+    display:-webkit-box;
     background: url(../images/agency.png) no-repeat -2.5rem -10rem;
     background-size: 25rem;
     margin-left: 0.25rem;
@@ -1165,6 +1170,7 @@
     display: -webkit-box;
     padding-left:  1.1rem;
     font-size: 0.8rem;
+    width: 1rem;
 }
 .vericode{
     -webkit-box-flex: 1;
@@ -1187,6 +1193,7 @@
     color:#2a5794;
     font-size: 0.7rem;
     text-align: center;
+    display: inline-block;
 }
 .btn_disable{
     color:#888888 !important;
@@ -1240,8 +1247,8 @@
 .hch{
     width:100%;
     height:2.5rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1287,12 +1294,13 @@
     bottom: 0%;
     width: 100%;
     height: 2.5rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
     background: #3262a3;
+    -webkit-box-pack: center;
 }
 .feedback{
     color:#fff;
@@ -1387,8 +1395,8 @@
     width: 100%;
     height: 4.2rem;
     padding: 0 0.75rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1448,12 +1456,13 @@
     bottom: 0%;
     width: 100%;
     height: 3rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
     background: #3262a3;
+    -webkit-box-pack: center;
 }
 .reobwo{
     color:#fff;
@@ -1486,8 +1495,8 @@
     left: 10%;
 }
 .rb_1{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1535,8 +1544,8 @@
     background: #fff;
     margin-top: 0.75rem;
     height:2.5rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1547,7 +1556,7 @@
     height:1rem;
     background: url(../images/agency.png) no-repeat -20rem -7.5rem;
     background-size: 25rem;
-    display: inline-block;
+    display: -webkit-box;
     margin-right: 0.5rem;
 }
 .ab_title{
@@ -1563,8 +1572,8 @@
     padding: 0 0.75rem;
 }
 .promis_list{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1602,6 +1611,9 @@
 }
 
 .pro_word{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
     flex:1;
     padding-left: 1rem;
 }
@@ -1685,8 +1697,8 @@
     margin-bottom: 0.75rem;
 }
 .cous_addtitle{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1757,8 +1769,8 @@
 .commis_list{
     background: #fff;
     height:3rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1801,8 +1813,8 @@
 }
 .reciv_list{
     height:3.5rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1882,8 +1894,8 @@
 }
 .becarewo{
     text-align: left;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -1937,10 +1949,9 @@
     border: 0.1rem solid #bbbbbb;
     overflow:hidden;
     margin: 0 auto;
-    display: flex;
     display: -webkit-box;
-    align-items: center;
-    -webkit-box-align: center;
+    display: flex;
+    margin-top: -1rem;
 }
 .pwd-box input[type="tel"]{
     width: 100%;
@@ -1957,10 +1968,8 @@
 .fake-box{
     width:100%;
     margin: 0 auto;
-    display: flex;
     display: -webkit-box;
-    align-items: center;
-    -webkit-box-align: center;
+    display: flex;
 }
 .fake-box input{
     width: 16.66%;
@@ -1970,6 +1979,7 @@
     font-size: 0.8rem;
     border-radius: 0;
     background: #ededed;
+    display: -webkit-box;
 }
 .fake-box input:nth-last-child(1){
     border:none;
@@ -1999,8 +2009,8 @@
 }
 .messg_code{
     height:3rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -2021,6 +2031,7 @@
     color:#cccccc;
     font-size: 0.75rem;
     padding-left: 0.5rem;
+    width:1rem;
 }
 .messg_btn{
     margin: 0 0.75rem;
@@ -2090,8 +2101,8 @@
     background: #fff;
 }
 .wdsu_wocon{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -2141,8 +2152,8 @@
     height:3rem;
     padding: 0 0.75rem;
     margin: 0.75rem 0;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -2153,6 +2164,9 @@
     -ms-flex: 1;
     flex:1;
     display: -webkit-box;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
 }
 .bank_id{
     color:#333333;
@@ -2175,8 +2189,8 @@
 }
 .mforminput{
     font-size: 1.25rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     margin-bottom: 0.75rem;
@@ -2249,8 +2263,8 @@
      margin-top: 0.5rem;
  }
 .appli_cash{
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -2265,12 +2279,12 @@
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-flex: 1;
-    flex:1;
-    display: -webkit-box;
+    /*flex:1;*/
+    /*display: -webkit-box;*/
     text-align: center;
     padding-right: 0.85rem;
     color:#333333;
-    height: 1.5rem;
+    /*height: 1.5rem;*/
 }
 .cash_num{
     color:#333333;

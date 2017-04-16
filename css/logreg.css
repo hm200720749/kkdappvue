@@ -7,8 +7,8 @@
     height:2.5rem;
     background: #fff;
     padding:0 0.75rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
@@ -19,8 +19,8 @@
     height:1.475rem;
     background: url(../images/agency.png) no-repeat -12.5rem -5rem;
     background-size: 25rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
 }
@@ -29,8 +29,8 @@
     height:1.25rem;
     background: url(../images/agency.png) no-repeat -15rem -5rem;
     background-size: 25rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
 }
@@ -59,8 +59,8 @@
 .agree{
     padding: 0 0.75rem;
     font-size: 0.65rem;
-    display: flex;
     display: -webkit-box;
+    display: flex;
     align-items: center;
     -webkit-box-align: center;
     justify-content: center;
