@@ -7,7 +7,9 @@ $(document).ready(function () {
         $(".bar-tab .tab-item").removeClass("active");
         $(this).addClass("active");
     });
-
+    $('.bar-nav .button-nav').click(function(){
+        window.history.back();
+    })
 
     var bwi = $(window).width();
     var bhe = $(window).height();
