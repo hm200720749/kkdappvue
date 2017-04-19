@@ -628,7 +628,10 @@
 }
 .ma2{
     /*width:90%;*/
-    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex:1;
 }
 .m_red{
   color:#3262a3;
@@ -2279,7 +2282,7 @@
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-flex: 1;
-    /*flex:1;*/
+    flex:1;
     /*display: -webkit-box;*/
     text-align: center;
     padding-right: 0.85rem;
