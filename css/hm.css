@@ -1487,3 +1487,23 @@
     outline: 0;
     -webkit-appearance: none;
 }
+.index .adv .pro_name,.index .adv .expam{
+    -webkit-box-pack: center;
+}
+.index .adv .pro_name .i_fuhao{
+    display: -webkit-box;
+    display: flex;
+}
+.project .pro_title{
+    -webkit-box-pack: center;
+}
+.project .pro_title .line{
+    display: -webkit-box;
+    display: flex;
+}
+.order .tab-order{
+    -webkit-box-pack: center;
+}
+.order .item-tab{
+    -webkit-box-pack: center;
+}
